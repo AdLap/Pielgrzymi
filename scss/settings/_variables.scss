@@ -1,8 +1,25 @@
 // AdLap 2021
 
-$color-nav-background: rgba(128,128,128,1);
-$color-nav-border: rgb(255, 0, 0);
+$color-background-main: rgba(0, 0, 0, 1);
+$color-txt-main: rgb(255, 255, 255);
+$color-nav-background: rgb(0, 0, 0);
+$color-nav-border: rgba(255, 0, 0, 1);
+$color-burger-icon: rgb(255, 255, 255);
 
 
 $tablet: 750px;
-$laptop: 1024px
+$laptop: 1024px;
+
+
+$light: 300;
+$regular: 400;
+$bold: 700;
+
+
+@mixin font-main ($size, $weight) {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: $size;
+  font-weight: $weight;
+  line-height: 1.5em;
+  color: $color-txt-main;
+}

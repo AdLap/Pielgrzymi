@@ -1,5 +1,26 @@
 //AdLap 2021
 
+.section__home {
+  height: 100vh;
+
+  @media (min-width: $tablet) {
+    height: calc(100vh - 70px);
+  }
+}
+
+
+.home__title {
+  @include font-main(2rem, $bold);
+  text-align: center;
+  margin: 10px auto 20px auto;
+  color: black;
+}
+
+.home__intro {
+  @include font-main(1rem, $regular);
+  margin: 20px auto 0 auto;
+}
+
 .movie {
   height: 0;
   padding-bottom: 56.25%;
@@ -13,7 +34,7 @@
     top: 0;
     width: 100%;
 
-    @media (min-width: 1025px) {
+    @media (min-width: $laptop) {
       width: 1024px;
       height: 576px;
       top: 50%;

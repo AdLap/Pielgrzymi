@@ -91,6 +91,7 @@
   transition: .2s linear;
 
   @media (min-width: $tablet) {
+    padding: 0;
     position: static;
     backdrop-filter: none;
     height: 100%;
@@ -102,6 +103,17 @@
   a {
     @include font-main(1.5rem, $bold);
     text-transform: uppercase;
-    line-height: 2em;
+    line-height: 70px;
+    padding: 0 1em 0 1em;
+
+    &:active {
+      text-shadow: 0 0 3px white;
+    }
+  }
+
+  li {
+    &:hover {
+      background-color: $color-menu-hover;
+    }
   }
 }

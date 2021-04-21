@@ -84,10 +84,11 @@
   height: 100vh;
   padding: 15px;
   position: fixed;
-  right: -160px;
+  right: -200px;
   top: 100px;
   z-index: 5;
   text-align: right;
+  transition: .2s linear;
 
   @media (min-width: $tablet) {
     position: static;

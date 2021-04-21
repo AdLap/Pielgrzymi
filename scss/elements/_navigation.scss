@@ -100,7 +100,8 @@
   }
 
   a {
-    @include font-main(2rem, $bold);
+    @include font-main(1.5rem, $bold);
     text-transform: uppercase;
+    line-height: 2em;
   }
 }

@@ -1,0 +1,21 @@
+.section__film {
+  //height: calc(100vh - 30px);
+}
+
+.film__title {
+  @include font-main(2rem, $bold);
+  margin-top: 30px;
+  text-align: center;
+}
+
+.film__description {
+  @include font-main(1rem, $regular);
+  text-align: left;
+  margin-top: 30px;
+}
+
+.shop__title {
+  @include font-main(2rem, $bold);
+  margin-top: 30px;
+  text-align: center;
+}

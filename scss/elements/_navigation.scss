@@ -21,6 +21,7 @@
   right: 10px;
   top: 10px;
   z-index: 5;
+  border: none;
 
   @media (min-width: $tablet) {
     display: none;
@@ -78,6 +79,10 @@
 }
 
 .head__menu {
+  background-color: $color-menu-background;
+  backdrop-filter: blur(10px);
+  height: 100vh;
+  padding: 15px;
   position: fixed;
   right: -160px;
   top: 100px;
@@ -86,6 +91,7 @@
 
   @media (min-width: $tablet) {
     position: static;
+    backdrop-filter: none;
     height: 100%;
     display: flex;
     justify-content: space-evenly;
@@ -97,4 +103,3 @@
     text-transform: uppercase;
   }
 }
-

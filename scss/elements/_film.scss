@@ -1,3 +1,5 @@
+// AdLap 2021
+
 .section__film {
   //height: calc(100vh - 30px);
 }
@@ -14,8 +16,49 @@
   margin-top: 30px;
 }
 
+
+
+//------------------------------------SHOP
+
 .shop__title {
   @include font-main(2rem, $bold);
   margin-top: 30px;
   text-align: center;
+}
+
+.form__container {
+  @include font-main(1rem, $regular);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.form__box {
+  padding: 1rem;
+}
+
+.form__label {
+  padding: .5rem;
+}
+
+.form__input {
+  @include font-main(1rem, $regular);
+  border-bottom: 2px solid white;
+  border-right: none;
+  border-top: none;
+  border-left: none;
+  background-color: black;
+}
+
+.form__check {
+  padding: 1rem;
+}
+
+.form__btn {
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 30px;
+  align-self: center;
+
 }

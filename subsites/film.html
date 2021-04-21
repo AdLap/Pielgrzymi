@@ -37,8 +37,58 @@
     </div>
 </section>
 
-<section id="shop">
+<section id="shop" class="section__shop container">
     <h2 class="shop__title">Film możesz zamówić niżej</h2>
+
+    <form class="form__container">
+
+        <div class="form__box">
+            <label for="name" class="form__label">Imię</label>
+            <input type="text" class="form__input" id="name" name="name">
+
+            <label for="surname" class="form__label">Nazwisko</label>
+            <input type="text" class="form__input" id="surname" name="surname">
+        </div>
+        <div class="form__box">
+            <label for="city" class="form__label">Miasto</label>
+            <input type="text" class="form__input" id="city" name="city">
+        </div>
+        <div class="form__box">
+            <label for="street" class="form__label">Ulica</label>
+            <input type="text" class="form__input" id="street" name="street">
+
+            <label for="house__nr" class="form__label">Numer domu</label>
+            <input type="text" class="form__input" id="house__nr" name="house__nr">
+
+            <label for="apartment__nr" class="form__label">Numer mieszkania</label>
+            <input type="text" class="form__input" id="apartment__nr" name="apartment__nr">
+        </div>
+        <div class="form__box">
+            <label for="email" class="form__label">Email</label>
+            <input type="text" class="form__input" id="email" name="email">
+        </div>
+        <div class="form__box">
+            <label for="quantity" class="form__label">Ilość</label>
+            <input type="number" class="form__input" id="quantity" name="quantity">
+        </div>
+
+        <div class="form__check">
+            <input class="check__input" type="checkbox" name="agree" id="agree">
+            <label class="check__label" for="agree">
+                Zapoznałem się z regulaminem i RODO
+            </label>
+        </div>
+
+        <button type="submit" class="form__btn">Zamawiam</button>
+
+        <div class="info-container">
+            <div id="error-message" class="alert alert-danger d-none">
+            </div>
+            <div id="success-message" class="alert alert-success d-none">
+            </div>
+        </div>
+    </form>
+
 </section>
 
 <footer id="footer"></footer>

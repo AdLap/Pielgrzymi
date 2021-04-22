@@ -55,7 +55,7 @@
 
 .menu-visible {
   span {
-    transition: transform .2s linear;
+    transition: .2s linear;
 
     &:first-of-type {
       transform: rotate(-45deg);

@@ -11,7 +11,7 @@ menuAnimation.addEventListener('click', function () {
     menuAnimation.classList.toggle('menu-visible');
 
     if (menuAnimation.classList.contains('menu-visible')) {
-        menu.style.transform = 'translate(-215px)'
+        menu.style.transform = 'translate(-415px)'
     }
 
     if (!menuAnimation.classList.contains('menu-visible')) {

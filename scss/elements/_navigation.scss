@@ -85,7 +85,7 @@
   height: 100vh;
   padding: 15px;
   position: fixed;
-  right: -200px;
+  right: -400px;
   top: 0;
   z-index: 4;
   text-align: right;
@@ -110,7 +110,7 @@
   }
 
   a {
-    @include font-main(1.5rem, $bold);
+    @include font-title(2rem, $medium);
     text-transform: uppercase;
     line-height: 70px;
     padding: 0 1em 0 1em;
@@ -118,11 +118,15 @@
     &:active {
       text-shadow: 0 0 3px white;
     }
-  }
 
-  li {
     &:hover {
-      background-color: $color-menu-hover;
+      color: $color-menu-hover;
     }
   }
+
+  //li {
+  //  &:hover {
+  //    background-color: $color-menu-hover;
+  //  }
+  //}
 }

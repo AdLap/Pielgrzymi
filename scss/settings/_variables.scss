@@ -1,25 +1,38 @@
 // AdLap 2021
+@use "sass:color";
 
 $color-background-main: rgba(0, 0, 0, 1);
-$color-txt-main: rgb(255, 255, 255);
+$color-txt-main: rgba(121, 121, 121,1);
 $color-nav-background: rgb(0, 0, 0);
-$color-nav-border: rgb(255, 255, 255,.2);
-$color-burger-icon: rgb(255, 255, 255);
+$color-nav-border: rgba(121, 121, 121,1);
+$color-burger-icon: rgba(121, 121, 121,1);
 $color-menu-background: rgba(0,0,0,.4);
-$color-menu-hover: rgba(255,255,255,.2);
+$color-menu-hover: color.scale($color-txt-main, $lightness: 70%);
+$color-input-border: rgba(255,255,255,.2);
+$color-input-background: rgba(255,255,255,.2);
 
 
 $tablet: 750px;
+$screen: 1000px;
 $laptop: 1200px;
 
 
 $light: 300;
 $regular: 400;
+$medium: 500;
 $bold: 700;
 
 
 @mixin font-main ($size, $weight) {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: $size;
+  font-weight: $weight;
+  line-height: 1.5em;
+  color: $color-txt-main;
+}
+
+@mixin font-title ($size, $weight) {
+  font-family: 'Saira Extra Condensed', sans-serif;
   font-size: $size;
   font-weight: $weight;
   line-height: 1.5em;

@@ -8,7 +8,7 @@
 }
 
 .shop__title {
-  @include font-main(2rem, $bold);
+  @include font-title(2rem, $bold);
   margin-top: 30px;
   text-align: center;
 }
@@ -32,11 +32,11 @@
 
 .form__input {
   @include font-main(1rem, $regular);
-  border-bottom: 2px solid white;
-  border-right: none;
-  border-top: none;
-  border-left: none;
-  background-color: black;
+  border: 2px solid $color-input-border;
+  //border-right: none;
+  //border-top: none;
+  //border-left: none;
+  background-color: $color-input-background;
   width: 300px;
 }
 

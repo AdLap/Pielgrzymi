@@ -2,10 +2,22 @@
 
 .section__film {
   //height: calc(100vh - 30px);
+  margin-top: 10%;
+
+  //@media (min-width: $tablet) {
+  //  margin-top: 30%;
+  //}
+  //
+  //@media (min-width: $screen) {
+  //  margin-top: 40%;
+  //}
+  @media (min-width: $tablet) and (max-height: 799px) {
+    margin-top: 30%;
+  }
 }
 
 .film__title {
-  @include font-main(2rem, $bold);
+  @include font-title(2rem, $bold);
   margin-top: 30px;
   text-align: center;
 }

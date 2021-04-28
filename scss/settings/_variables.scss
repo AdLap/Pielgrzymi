@@ -23,18 +23,18 @@ $medium: 500;
 $bold: 700;
 
 
-@mixin font-main ($size, $weight) {
+@mixin font-main {
   font-family: 'Roboto Condensed', sans-serif;
-  font-size: $size;
-  font-weight: $weight;
+  font-size: 1rem;
+  font-weight: $regular;
   line-height: 1.5em;
   color: $color-txt-main;
 }
 
-@mixin font-title ($size, $weight) {
+@mixin font-title {
   font-family: 'Saira Extra Condensed', sans-serif;
-  font-size: $size;
-  font-weight: $weight;
+  font-size: 2rem;
+  font-weight: $bold;
   line-height: 1.5em;
   color: $color-txt-main;
 }

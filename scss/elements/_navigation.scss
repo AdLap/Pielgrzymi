@@ -110,7 +110,8 @@
   }
 
   a {
-    @include font-title(2rem, $medium);
+    @include font-title;
+    font-weight: $medium;
     text-transform: uppercase;
     line-height: 70px;
     padding: 0 1em 0 1em;

@@ -8,13 +8,11 @@
 }
 
 .shop__title {
-  @include font-title(2rem, $bold);
   margin-top: 30px;
   text-align: center;
 }
 
 .form__container {
-  @include font-main(1rem, $regular);
   margin-top: 30px;
   display: flex;
   justify-content: center;
@@ -31,7 +29,7 @@
 }
 
 .form__input {
-  @include font-main(1rem, $regular);
+  @include font-main;
   border: 2px solid $color-input-border;
   //border-right: none;
   //border-top: none;

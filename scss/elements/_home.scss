@@ -2,15 +2,19 @@
 
 .section__home {
   height: 100vh;
-  position: relative;
+  min-height: 600px;
 
   @media (min-width: $tablet) {
-    height: calc(100vh - 100px);
+    height: calc(100vh - 70px);
+    min-height: 750px;
+  }
+
+  @media (min-width: $laptop) {
+    min-height: 800px;
   }
 }
 
 .home__title {
-  @include font_title(2rem, $bold);
   text-align: center;
   margin: 10px auto 20px auto;
   color: black;
@@ -21,13 +25,13 @@
   padding-bottom: 56.25%;
   position: relative;
   width: 100%;
-  //margin-bottom: 10%;
 
   iframe {
     height: 100%;
     left: 0;
     position: absolute;
-    top: 0;
+    //top: 50%;
+    //transform: translateY(-50%);
     width: 100%;
 
     @media (min-width: $laptop) {
@@ -41,13 +45,10 @@
 }
 
 .home__intro {
-  @include font-main(1rem, $regular);
   margin-top: 30px;
   width: 100%;
-  //position: absolute;
-  //bottom: 0;
 
-  @media (min-width: $tablet) {
+  @media (min-width: $laptop) {
     margin: 30px auto 0 auto;
     width: 1024px;
   }

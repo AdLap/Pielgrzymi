@@ -28,3 +28,11 @@ a {
 li {
   list-style: none;
 }
+
+.txt {
+  @include font-main;
+}
+
+.title {
+  @include font-title;
+}

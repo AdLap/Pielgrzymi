@@ -1,4 +1,6 @@
 // AdLap 2021
+// import '../css/main.css'
+// import '../scss/main.scss';
 
 const menuAnimation = document.querySelector('#burger');
 const menu = document.querySelector('#menu');

@@ -1,6 +1,8 @@
 //AdLap 2021
+@use 'sass:color';
 
 .section__home {
+  background-color: color.scale($color-background-main, $lightness: 5%);
   height: 100vh;
   min-height: 600px;
 
@@ -45,7 +47,7 @@
 }
 
 .home__intro {
-  margin-top: 30px;
+  margin-top: $margin-main;
   width: 100%;
 
   @media (min-width: $laptop) {

@@ -1,5 +1,12 @@
 //AdLap 2021
 
+@use 'sass:color';
+
+.section__shop {
+  background-color: color.scale($color-background-main, $lightness: 15%);
+  padding-bottom: 2rem;
+}
+
 .shop__container {
   display: flex;
   justify-content: space-evenly;
@@ -8,7 +15,7 @@
 }
 
 .shop__title {
-  margin-top: 30px;
+  padding: $padding-main;
   text-align: center;
 }
 
@@ -43,10 +50,8 @@
 }
 
 .form__btn {
-  margin: 1rem;
-  padding: 1rem;
-  border-radius: 30px;
-  align-self: center;
+  padding: 10px 30px;
+  border: none;
 }
 
 .shop__img {
@@ -54,4 +59,6 @@
   height:300px;
   background-color: rgba(255,255,255,.5);
   color: black;
+  background-image: url('../../images/2.jpg');
+  background-size: cover;
 }

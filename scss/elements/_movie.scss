@@ -1,26 +1,33 @@
 // AdLap 2021
 
-.section__movie {
+@use 'sass:color';
 
+.section__movie {
+background-color: color.scale($color-background-main, $lightness: 10%);
+  padding: $padding-main 0 60px 0;
 }
 
 .movie__title {
-  margin-top: 30px;
   text-align: center;
+  color: #638018;
 }
 
 .movie__description {
   text-align: left;
-  margin-top: 30px;
+  margin-top: $margin-main;
 }
 
 .movie__online {
-
+  text-align: center;
+  margin: $margin-main 0 $margin-main 0;
 }
 
 .movie__gallery {
-  margin: 30px auto 30px auto;
+  margin: 0 auto;
+  padding: 30px 0 30px 0;
   width: 90%;
   height: 450px;
-  background-color: rgba(255,255,255,.5);
+  background-color: rgba(255, 255, 255, .5);
+  background-image: url("../../images/1.jpg");
+  background-size: 33%;
 }

@@ -6,9 +6,9 @@
   box-sizing: border-box;
 }
 
-body {
-  background-color: $color-background-main;
-}
+//body {
+//  background-color: $color-background-main;
+//}
 
 .container {
   width: 100%;
@@ -35,4 +35,18 @@ li {
 
 .title {
   @include font-title;
+}
+
+.btn {
+  @include font-main;
+  color: $color-title;
+  display: inline-block;
+  padding: 20px 30px;
+  background-color: $color-btn;
+  border-radius: 50px;
+  box-shadow: 0 0 3px $color-menu-hover;
+
+  &:hover {
+    box-shadow: 0 0 10px $color-menu-hover;
+  }
 }

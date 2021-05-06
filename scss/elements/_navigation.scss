@@ -3,7 +3,7 @@
 .head__nav__bar {
 
   @media (min-width: $tablet) {
-    width: 100%;
+    width: 100vw;
     height: 70px;
     background-color: $color-nav-background;
     border-bottom: 4px solid $color-nav-border;
@@ -100,6 +100,7 @@
   }
 
   @media (min-width: $tablet) {
+    background-color: $color-nav-background;
     padding: 0;
     position: static;
     backdrop-filter: none;

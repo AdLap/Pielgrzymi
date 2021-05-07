@@ -3,18 +3,29 @@
 @use 'sass:color';
 
 .section__movie {
-background-color: color.scale($color-background-main, $lightness: 10%);
+  background-color: color.scale($color-background-main, $lightness: 10%);
   padding: $padding-main 0 60px 0;
 }
 
 .movie__title {
   text-align: center;
-  color: #638018;
+  color: #93b33d;
 }
 
 .movie__description {
-  text-align: left;
-  margin-top: $margin-main;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  &__article {
+    text-align: justify;
+  }
+
+  //&__img {
+  //  width: 640px;
+  //  height: 400px;
+  //  background-image: url("../../images/3.jpg");
+  //}
 }
 
 .movie__online {
@@ -30,4 +41,8 @@ background-color: color.scale($color-background-main, $lightness: 10%);
   background-color: rgba(255, 255, 255, .5);
   background-image: url("../../images/1.jpg");
   background-size: 33%;
+}
+
+.movie__review {
+  text-align: justify;
 }

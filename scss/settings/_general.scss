@@ -31,10 +31,18 @@ li {
 
 .txt {
   @include font-main;
+  padding: 1em 0 1em 0;
 }
 
 .title {
   @include font-title;
+  padding: 1em 0 1em 0;
+}
+
+@for $i from 1 through 4 {
+  h#{$i} {
+    font-size: 3rem - ($i / 2);
+  }
 }
 
 .btn {

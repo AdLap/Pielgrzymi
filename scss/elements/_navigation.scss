@@ -1,5 +1,7 @@
 // AdLap 2021
 
+@use 'sass:color';
+
 .head__nav__bar {
 
   @media (min-width: $tablet) {
@@ -112,6 +114,8 @@
 
   a {
     @include font-title;
+    color: color.scale($color-txt-main, $lightness: 70%);
+    font-size: 2rem;
     font-weight: $medium;
     text-transform: uppercase;
     line-height: 70px;

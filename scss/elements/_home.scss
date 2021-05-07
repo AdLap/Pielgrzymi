@@ -27,18 +27,18 @@
   padding-bottom: 56.25%;
   position: relative;
   width: 100%;
+  max-width: 853px;
+  margin: 0 auto 0 auto;
 
   iframe {
     height: 100%;
     left: 0;
     position: absolute;
-    //top: 50%;
-    //transform: translateY(-50%);
     width: 100%;
 
-    @media (min-width: $laptop) {
-      width: 1024px;
-      height: 576px;
+    @media (min-width: $screen) {
+      width: 853px;
+      height: 480px;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
@@ -47,11 +47,15 @@
 }
 
 .home__intro {
-  margin-top: $margin-main;
   width: 100%;
 
+  @media (min-width: 854px) {
+    width: 853px;
+    margin: 0 auto 0 auto;
+  }
+
   @media (min-width: $laptop) {
-    margin: 30px auto 0 auto;
-    width: 1024px;
+    margin: -100px auto 0 auto;
+
   }
 }

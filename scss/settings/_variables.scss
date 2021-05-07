@@ -3,15 +3,16 @@
 
 $color-background-main: rgba(24, 24, 24,1);
 $color-txt-main: rgba(121, 121, 121,1);
-$color-title: color.scale($color-txt-main, $lightness: 70%);
+$color-title: #93b33d /*color.scale($color-txt-main, $lightness: 70%)*/;
 $color-nav-background: rgba(24, 24, 24,1);
 $color-nav-border: transparent;
 $color-burger-icon: rgba(121, 121, 121,1);
 $color-menu-background: rgba(0,0,0,.4);
-$color-menu-hover: color.scale($color-txt-main, $lightness: 70%);
+$color-menu-hover: #93b33d;
 $color-input-border: rgba(0, 0, 0, 0.2);
 $color-input-background: rgba(255,255,255,.2);
 $color-btn: color.scale($color-txt-main, $lightness: 10%);
+
 
 
 $tablet: 750px;
@@ -23,7 +24,6 @@ $light: 300;
 $regular: 400;
 $medium: 500;
 $bold: 700;
-
 
 $margin-main: 1.875rem;
 $padding-main: 1.875rem;
@@ -39,9 +39,9 @@ $padding-main: 1.875rem;
 
 @mixin font-title {
   font-family: 'Saira Extra Condensed', sans-serif;
-  font-size: 2rem;
   font-weight: $bold;
   line-height: 1.5em;
   color: $color-title;
+  text-align: center;
 }
 

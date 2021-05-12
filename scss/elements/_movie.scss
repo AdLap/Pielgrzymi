@@ -3,13 +3,14 @@
 @use 'sass:color';
 
 .section__movie {
-  background-color: color.scale($color-background-main, $lightness: 10%);
+  background-color: $color-movie-background;  //color.scale($color-background-main, $lightness: 10%);
   padding: $padding-main 0 60px 0;
+  border-bottom: 2px solid $color-movie-border;
 }
 
 .movie__title {
   text-align: center;
-  color: #93b33d;
+  color: $color-title-h1;
 }
 
 .movie__description {
@@ -39,10 +40,15 @@
   width: 90%;
   height: 450px;
   background-color: rgba(255, 255, 255, .5);
-  background-image: url("../images/1.jpg");
+  background-image: url("../../images/1.jpg");
   background-size: 33%;
 }
 
 .movie__review {
   text-align: justify;
+
+  h2,
+  h3 {
+    color: $color-title-h1;
+  }
 }

@@ -8,7 +8,7 @@
     width: 100vw;
     height: 70px;
     background-color: $color-nav-background;
-    border-bottom: 4px solid $color-nav-border;
+    border-bottom: 2px solid $color-nav-border;
   }
 }
 
@@ -114,7 +114,7 @@
 
   a {
     @include font-title;
-    color: color.scale($color-txt-main, $lightness: 70%);
+    color: $color-menu-txt;  //color.scale($color-txt-main, $lightness: 70%);
     font-size: 2rem;
     font-weight: $medium;
     text-transform: uppercase;

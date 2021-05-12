@@ -2,16 +2,36 @@
 @use "sass:color";
 
 $color-background-main: rgba(24, 24, 24,1);
-$color-txt-main: rgba(121, 121, 121,1);
-$color-title: #93b33d /*color.scale($color-txt-main, $lightness: 70%)*/;
-$color-nav-background: rgba(24, 24, 24,1);
-$color-nav-border: transparent;
+$color-txt-main: #c5c5c5;  //rgba(121, 121, 121,1);
+$color-title: #020202;
+$color-btn: color.scale($color-txt-main, $lightness: 10%);
+
+$color-nav-background: #080808; //rgba(24, 24, 24,1);
+$color-nav-border: #626262;
 $color-burger-icon: rgba(121, 121, 121,1);
 $color-menu-background: rgba(0,0,0,.4);
-$color-menu-hover: #93b33d;
-$color-input-border: rgba(0, 0, 0, 0.2);
-$color-input-background: rgba(255,255,255,.2);
-$color-btn: color.scale($color-txt-main, $lightness: 10%);
+$color-menu-txt: #626262;
+$color-menu-hover: #7b932a;
+
+$color-title-h1: #748d1e;
+$color-home-background: #040404;
+$color-home-border: #748d1e;
+$color-trailer-border: #919191;
+
+$color-movie-background: #161616;
+$color-movie-title: #748d1e;
+$color-movie-border: #fcfcfc;
+
+$color-shop-background: #505050;
+$color-input-border: #0d0d0d;
+$color-input-background: #656565;
+$color-shop-btn: #020202;
+$color-shop-btn-border: #919191;
+
+$color-contact-background: color.scale($color-shop-background, $lightness: 10%);
+
+
+
 
 
 

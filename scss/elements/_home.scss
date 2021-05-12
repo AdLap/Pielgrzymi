@@ -2,9 +2,10 @@
 @use 'sass:color';
 
 .section__home {
-  background-color: color.scale($color-background-main, $lightness: 5%);
+  background-color: $color-home-background;
   height: 100vh;
   min-height: 600px;
+  border-bottom: 2px solid $color-home-border;
 
   @media (min-width: $tablet) {
     height: calc(100vh - 70px);
@@ -22,7 +23,7 @@
   color: black;
 }
 
-.movie {
+.trailer {
   height: 0;
   padding-bottom: 56.25%;
   position: relative;
@@ -35,6 +36,7 @@
     left: 0;
     position: absolute;
     width: 100%;
+    border: 1px solid $color-trailer-border;
 
     @media (min-width: $screen) {
       width: 853px;

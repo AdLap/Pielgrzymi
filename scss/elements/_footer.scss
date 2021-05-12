@@ -1,4 +1,20 @@
 footer {
-  height: 30px;
-  background-color: $color-background-main;
+  @include font-main;
+  height: 50px;
+  background-color: $color-nav-background;
+
+  .container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    span {
+padding: 0;
+    }
+
+    div {
+      padding: 0;
+    }
+  }
 }

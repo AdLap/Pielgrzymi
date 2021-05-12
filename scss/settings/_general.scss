@@ -6,17 +6,13 @@
   box-sizing: border-box;
 }
 
-//body {
-//  background-color: $color-background-main;
-//}
-
 .container {
   width: 100%;
   margin: 0 auto;
   padding: 0 15px;
 
   @media (min-width: $laptop) {
-    width: 1200px;
+    width: $laptop;
     padding: 0;
   }
 }

@@ -10,26 +10,50 @@
   @media (min-width: $tablet) {
     height: calc(100vh - 70px);
     min-height: 750px;
-  }
 
+    &::before,
+    &::after {
+      content: '';
+      background-repeat: no-repeat;
+      background-size: contain;
+      display: block;
+      position: absolute;
+      top: 70px;
+      width: 200px;
+      height: calc(100vh - 20%);
+      z-index: 0;
+    }
+
+    &::before {
+      background-image: url("../../images/background_left.png");
+      left: 0;
+    }
+
+    &::after {
+      background-image: url("../../images/background_right.png");
+      right: 0;
+    }
+  }
   @media (min-width: $laptop) {
     min-height: 800px;
   }
-}
-
-.home__title {
-  text-align: center;
-  margin: 10px auto 20px auto;
-  color: black;
 }
 
 .trailer {
   height: 0;
   padding-bottom: 56.25%;
   position: relative;
+  top: 50vh;
+  transform: translateY(-75%);
   width: 100%;
   max-width: 853px;
   margin: 0 auto 0 auto;
+  z-index: 1;
+
+  @media (min-width: $tablet) {
+    top: calc(50vh - 70px);
+    transform: translateY(-50%);
+  }
 
   iframe {
     height: 100%;
@@ -38,9 +62,9 @@
     width: 100%;
     border: 1px solid $color-trailer-border;
 
-    @media (min-width: $screen) {
-      width: 853px;
-      height: 480px;
+    @media (min-width: $tablet) {
+      width: 750px; //853px;
+      height: 422.039px;  //480px
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
@@ -50,14 +74,14 @@
 
 .home__intro {
   width: 100%;
+  position: absolute;
+  bottom: 25%;
+  z-index: 1;
 
-  @media (min-width: 854px) {
-    width: 853px;
+  @media (min-width: $tablet) {
     margin: 0 auto 0 auto;
-  }
-
-  @media (min-width: $laptop) {
-    margin: -100px auto 0 auto;
-
+    bottom: 10%;
+    left: 0;
+    text-align: center;
   }
 }

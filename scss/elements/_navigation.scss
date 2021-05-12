@@ -2,7 +2,7 @@
 
 @use 'sass:color';
 
-.head__nav__bar {
+.head__nav {
 
   @media (min-width: $tablet) {
     width: 100vw;
@@ -10,10 +10,10 @@
     background-color: $color-nav-background;
     border-bottom: 2px solid $color-nav-border;
   }
-}
 
-.head__nav {
-  height: 100%;
+  &__bar {
+    height: 100%;
+  }
 }
 
 .burger__box {
@@ -114,7 +114,7 @@
 
   a {
     @include font-title;
-    color: $color-menu-txt;  //color.scale($color-txt-main, $lightness: 70%);
+    color: $color-menu-txt;
     font-size: 2rem;
     font-weight: $medium;
     text-transform: uppercase;
@@ -129,10 +129,4 @@
       color: $color-menu-hover;
     }
   }
-
-  //li {
-  //  &:hover {
-  //    background-color: $color-menu-hover;
-  //  }
-  //}
 }

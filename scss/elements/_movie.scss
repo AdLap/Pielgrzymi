@@ -1,9 +1,7 @@
 // AdLap 2021
 
-@use 'sass:color';
-
 .section__movie {
-  background-color: $color-movie-background;  //color.scale($color-background-main, $lightness: 10%);
+  background-color: $color-movie-background;
   padding: $padding-main 0 60px 0;
   border-bottom: 2px solid $color-movie-border;
 }
@@ -21,12 +19,6 @@
   &__article {
     text-align: justify;
   }
-
-  //&__img {
-  //  width: 640px;
-  //  height: 400px;
-  //  background-image: url("../../images/3.jpg");
-  //}
 }
 
 .movie__online {
@@ -37,11 +29,55 @@
 .movie__gallery {
   margin: 0 auto;
   padding: 30px 0 30px 0;
-  width: 90%;
-  height: 450px;
-  background-color: rgba(255, 255, 255, .5);
-  background-image: url("../../images/1.jpg");
+  width: 100%;
+  height: 500px;
   background-size: 33%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.movie__gallery__img {
+  @for $i from 1 through 6 {
+    &:nth-of-type(#{$i}) {
+      background-image: url("../../images/#{$i}.jpg");
+    }
+  }
+
+  width: 340px;
+  height: 200px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 3px;
+  cursor: pointer;
+  transition: .2s linear;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &:nth-of-type(1) {
+    background-size: 95%;
+    background-position: center;
+    background-color: $color-movie-background;
+    border: 1px solid $color-nav-border;
+  }
+
+  &:nth-of-type(5) {
+    box-shadow: 0 0 10px $color-nav-border;
+  }
+
+  &:nth-of-type(3) {
+    border: 1px solid $color-nav-border;
+  }
+
+  &:nth-of-type(6) {
+    background-size: 95%;
+    background-position: center;
+    background-color: $color-movie-background;
+    box-shadow: 0 0 10px $color-nav-border;
+  }
 }
 
 .movie__review {
@@ -52,3 +88,4 @@
     color: $color-title-h1;
   }
 }
+

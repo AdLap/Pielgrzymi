@@ -1,5 +1,4 @@
 //AdLap 2021
-@use 'sass:color';
 
 .section__home {
   background-color: $color-home-background;
@@ -25,12 +24,12 @@
     }
 
     &::before {
-      background-image: url("../../images/background_left.png");
+      background-image: url("../images/background_left.png");
       left: 0;
     }
 
     &::after {
-      background-image: url("../../images/background_right.png");
+      background-image: url("../images/background_right.png");
       right: 0;
     }
   }

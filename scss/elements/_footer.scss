@@ -1,5 +1,6 @@
 footer {
   @include font-main;
+  width: 100vw;
   height: 50px;
   background-color: $color-nav-background;
 

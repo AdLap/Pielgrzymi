@@ -10,32 +10,33 @@
     height: calc(100vh - 70px);
     min-height: 750px;
 
-    &::before,
-    &::after {
-      content: '';
-      background-repeat: no-repeat;
-      background-size: contain;
-      display: block;
-      position: absolute;
-      top: 70px;
-      width: 200px;
-      height: calc(100vh - 20%);
-      z-index: 0;
-    }
-
-    &::before {
-      background-image: url("../images/background_left.png");
-      left: 0;
-    }
-
-    &::after {
-      background-image: url("../images/background_right.png");
-      right: 0;
-    }
   }
   @media (min-width: $laptop) {
     min-height: 800px;
   }
+}
+
+.home__background__img {
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+  position: absolute;
+  top: 70px;
+  width: 200px;
+  height: 80vh;
+  z-index: 1;
+
+  &__left {
+    background-image: url("../images/background_left.png");
+    left: 0;
+  }
+
+  &__right {
+    background-image: url("../images/background_right.png");
+    background-position: right top;
+    right: 0;
+  }
+
 }
 
 .trailer {
@@ -45,7 +46,7 @@
   top: 50vh;
   transform: translateY(-75%);
   width: 100%;
-  max-width: 853px;
+  max-width: 750px;
   margin: 0 auto 0 auto;
   z-index: 1;
 
@@ -63,7 +64,7 @@
 
     @media (min-width: $tablet) {
       width: 750px; //853px;
-      height: 422.039px;  //480px
+      height: 422.039px; //480px
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);

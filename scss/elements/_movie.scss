@@ -40,7 +40,7 @@
 .movie__gallery__img {
   @for $i from 1 through 6 {
     &:nth-of-type(#{$i}) {
-      background-image: url("../images/#{$i}.jpg");
+      background-image: url("../images/#{$i}.png");
     }
   }
 

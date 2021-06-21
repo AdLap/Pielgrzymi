@@ -37,7 +37,7 @@ li {
 
 @for $i from 1 through 4 {
   h#{$i} {
-    font-size: 3rem - ($i / 2);
+    font-size: 3rem - ($i * .5);
   }
 }
 

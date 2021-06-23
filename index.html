@@ -47,7 +47,7 @@
                     allowfullscreen></iframe>
 
             <p class="home__intro txt">Film drogi. Czterech nawróconych w więzieniu recydywistów wyrusza na piechotę do
-            Watykanu. Reż. Przemysław Jan Chrobak, Prod. Polska 2020, czas trwania 84 min.</p>
+                Watykanu. Reż. Przemysław Jan Chrobak, Prod. Polska 2020, czas trwania 84 min.</p>
         </div>
     </div>
 </section>
@@ -84,6 +84,7 @@
         </p>
 
         <div id="gallery" class="movie__gallery">
+            <!-- to podpiąć skrypt z js galerii -->
             <div class="movie__gallery__img"></div>
             <div class="movie__gallery__img"></div>
             <div class="movie__gallery__img"></div>
@@ -146,66 +147,63 @@
 <section id="shop" class="section__shop">
     <div class="container">
         <h2 class="shop__title title">Formularz zamówienia</h2>
-        <div class="shop__container">
-            <form class="form__container txt">
+        <div id="form__container" class="shop__container">
+            <!-- <form class="form__container txt">
+                 <div class="form__box">
+                     <label for="name" class="form__label">Imię</label><br>
+                     <input type="text" class="form__input" id="name" name="name">
+                 </div>
+                 <div class="form__box">
+                     <label for="surname" class="form__label">Nazwisko</label><br>
+                     <input type="text" class="form__input" id="surname" name="surname">
+                 </div>
+                 <div class="form__box">
+                     <label for="city" class="form__label">Miasto</label><br>
+                     <input type="text" class="form__input" id="city" name="city">
+                 </div>
+                 <div class="form__box">
+                     <label for="post" class="form__label">Kod pocztowy</label><br>
+                     <input type="text" class="form__input" id="post" name="post">
+                 </div>
+                 <div class="form__box">
+                     <label for="street" class="form__label">Ulica</label><br>
+                     <input type="text" class="form__input" id="street" name="street">
+                 </div>
+                 <div class="form__box">
+                     <label for="house__nr" class="form__label">Nr domu</label><br>
+                     <input type="text" class="form__input" id="house__nr" name="house__nr">
+                 </div>
+                 <div class="form__box">
+                     <label for="apartment__nr" class="form__label">Nr mieszkania</label><br>
+                     <input type="text" class="form__input" id="apartment__nr" name="apartment__nr">
+                 </div>
+                 <div class="form__box">
+                     <label for="email" class="form__label">Email</label><br>
+                     <input type="text" class="form__input" id="email" name="email">
+                 </div>
+                 <div class="form__box">
+                     <label for="quantity" class="form__label">Ilość</label><br>
+                     <input type="number" class="form__input" id="quantity" name="quantity">
+                 </div>
 
-                <div class="form__box">
-                    <label for="name" class="form__label">Imię</label><br>
-                    <input type="text" class="form__input" id="name" name="name">
-                </div>
-                <div class="form__box">
-                    <label for="surname" class="form__label">Nazwisko</label><br>
-                    <input type="text" class="form__input" id="surname" name="surname">
-                </div>
-                <div class="form__box">
-                    <label for="city" class="form__label">Miasto</label><br>
-                    <input type="text" class="form__input" id="city" name="city">
-                </div>
-                <div class="form__box">
-                    <label for="post" class="form__label">Kod pocztowy</label><br>
-                    <input type="text" class="form__input" id="post" name="post">
-                </div>
-                <div class="form__box">
-                    <label for="street" class="form__label">Ulica</label><br>
-                    <input type="text" class="form__input" id="street" name="street">
-                </div>
-                <div class="form__box">
-                    <label for="house__nr" class="form__label">Nr domu</label><br>
-                    <input type="text" class="form__input" id="house__nr" name="house__nr">
-                </div>
-                <div class="form__box">
-                    <label for="apartment__nr" class="form__label">Nr mieszkania</label><br>
-                    <input type="text" class="form__input" id="apartment__nr" name="apartment__nr">
-                </div>
-                <div class="form__box">
-                    <label for="email" class="form__label">Email</label><br>
-                    <input type="text" class="form__input" id="email" name="email">
-                </div>
-                <div class="form__box">
-                    <label for="quantity" class="form__label">Ilość</label><br>
-                    <input type="number" class="form__input" id="quantity" name="quantity">
-                </div>
+                 <div class="form__check">
+                     <input class="check__input" type="checkbox" name="agree" id="agree">
+                     <label class="check__label" for="agree">
+                         Zapoznałem się z regulaminem i RODO
+                     </label>
+                 </div>
 
-                <div class="form__check">
-                    <input class="check__input" type="checkbox" name="agree" id="agree">
-                    <label class="check__label" for="agree">
-                        Zapoznałem się z regulaminem i RODO
-                    </label>
-                </div>
+                 <button type="submit" class="form__btn btn">Zamawiam</button>
 
-                <button type="submit" class="form__btn btn">Zamawiam</button>
+                 <div class="info-container">
+                     <div id="error-message" class="alert alert-danger d-none">
+                     </div>
+                     <div id="success-message" class="alert alert-success d-none">
+                     </div>
+                 </div>
+             </form>
 
-                <div class="info-container">
-                    <div id="error-message" class="alert alert-danger d-none">
-                    </div>
-                    <div id="success-message" class="alert alert-success d-none">
-                    </div>
-                </div>
-            </form>
-
-            <div class="shop__img">
-                Miejsce na zdjęcie okładki
-            </div>
+            <div class="shop__img"></div> -->
         </div>
     </div>
 </section>
@@ -228,6 +226,6 @@
     </div>
 </footer>
 
-<script src="js/app.js"></script>
+<script src="build/out.js"></script>
 </body>
 </html>

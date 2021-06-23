@@ -1,6 +1,7 @@
 // AdLap 2021
-// import '../css/main.css'
-// import '../scss/main.scss';
+import React from "react";
+import ReactDOM from "react-dom";
+import {Form} from "./form";
 
 const menuAnimation = document.querySelector('#burger');
 const menu = document.querySelector('#menu');
@@ -37,5 +38,11 @@ media.addEventListener('change', function (e) {
     }
 });
 
-// FORM VALIDATION
+// FORM
 
+const Shop = () => <Form />
+
+ReactDOM.render(<Shop/>, document.getElementById("form__container"));
+
+
+// GALLERY

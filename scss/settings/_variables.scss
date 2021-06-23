@@ -5,6 +5,8 @@ $color-background-main: rgba(24, 24, 24,1);
 $color-txt-main: #c5c5c5;  //rgba(121, 121, 121,1);
 $color-title: #020202;
 $color-btn: color.scale($color-txt-main, $lightness: 10%);
+$color-err: #ff3030;
+$color-success: #7b932a;
 
 $color-nav-background: #080808; //rgba(24, 24, 24,1);
 $color-nav-border: #626262;

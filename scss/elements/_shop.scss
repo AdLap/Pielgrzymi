@@ -1,6 +1,8 @@
 //AdLap 2021
 
 @use 'sass:color';
+@import '../settings/variables';
+
 
 .section__shop {
   background-color: $color-shop-background;
@@ -42,20 +44,36 @@
   padding: 1rem;
 }
 
+.check__label {
+  margin-left: 20px;
+}
+
 .form__btn {
   @include font-main;
   border-radius: 0;
   background-color: $color-shop-btn;
   padding: 10px 30px;
   border: 1px solid $color-shop-btn-border;
-  align-self: flex-end;
+  align-self: flex-start;
+}
+
+.form__msg__err {
+  width: 375px;
+  color: $color-err;
+}
+
+.form__msg__success {
+  width: 200px;
+  color: $color-success;
 }
 
 .shop__img {
   width: 300px;
   height:400px;
+  margin-top: 69px;
   background-color: rgba(255,255,255,.5);
   color: black;
   background-image: url('../images/cover.png');
   background-size: cover;
+  align-self: flex-start;
 }

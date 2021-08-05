@@ -1,7 +1,8 @@
 // AdLap 2021
 import React from "react";
 import ReactDOM from "react-dom";
-import {Form} from "./form";
+import { Form } from "./Form";
+import { Gallery } from "./gallery/Gallery";
 
 const menuAnimation = document.querySelector('#burger');
 const menu = document.querySelector('#menu');
@@ -49,13 +50,10 @@ mediaHeight.addEventListener('change', function (e) {
 });
 
 // FORM
-
-const Shop = () => <Form />
-
-ReactDOM.render(<Shop/>, document.getElementById("form__container"));
-
+ReactDOM.render(<Form />, document.getElementById('form__container'));
 
 // GALLERY
+ReactDOM.render(<Gallery />, document.getElementById('gallery'));
 
 /* json-server --watch db.json */
 

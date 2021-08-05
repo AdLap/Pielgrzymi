@@ -19,10 +19,18 @@ export const Gallery = () => {
         setCurrPic(pic);
     }
 
+    const closeModal = todo => {
+        setCurrPic(todo);
+    }
+
+    const nextPic = next => {
+        setCurrPic(next);
+    }
+
     return (
         <>
           {pics.map((img, idx) => <Picture pic={img} key={idx} onShowPic={showPic} />)}
-          {currPic && <Modal pic={currPic}/>}
+          {currPic && <Modal pic={currPic} onClose={closeModal}/>}
         </>
     )
 }

@@ -94,52 +94,6 @@
         box-shadow: 0 0 10px $color-nav-border;
       }
     }
-
-    &__modal {
-      width: 90vw;
-      height: 90vh;
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      overflow: hidden;
-
-      &__prev {
-        position: absolute;
-        top: 0;
-        left: 0;
-        font-size: 24px;
-        color: white;
-        cursor: pointer;
-      }
-
-      &__next {
-        position: absolute;
-        top: 0;
-        right: 0;
-        font-size: 24px;
-        color: white;
-        cursor: pointer;
-      }
-
-      &__close {
-        position: absolute;
-        top: 0;
-        right: 0;
-        font-size: 24px;
-        color: white;
-        cursor: pointer;
-      }
-
-      &__img {
-        width: 100%;
-        height: auto;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-      }
-    }
   }
 
   &__review {

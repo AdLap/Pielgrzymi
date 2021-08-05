@@ -25,6 +25,7 @@
   top: 10px;
   z-index: 5;
   border: none;
+  cursor: pointer;
 
   @media screen and (min-width: $laptop) and (min-height: $height-first-bp) {
     display: none;

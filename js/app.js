@@ -5,7 +5,8 @@ import {Form} from "./form";
 
 const menuAnimation = document.querySelector('#burger');
 const menu = document.querySelector('#menu');
-const media = window.matchMedia('(min-width: 1200px)');
+const mediaWidth = window.matchMedia('(min-width: 1200px)');
+const mediaHeight = window.matchMedia('(min-height: 650px)');
 
 // BURGER ANIMATION
 menuAnimation.addEventListener('click', function () {
@@ -25,7 +26,18 @@ menu.addEventListener('click', function () {
     menuAnimation.classList.remove('menu-visible');
 });
 
-media.addEventListener('change', function (e) {
+mediaWidth.addEventListener('change', function (e) {
+    if (e.matches) {
+        menuAnimation.classList.remove('menu-visible');
+        menu.style.transform = 'translateY(0)';
+    }
+
+    if (!e.matches) {
+        menu.style.transform = 'translateY(-215px)';
+    }
+});
+
+mediaHeight.addEventListener('change', function (e) {
     if (e.matches) {
         menuAnimation.classList.remove('menu-visible');
         menu.style.transform = 'translateY(0)';

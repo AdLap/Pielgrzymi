@@ -6,7 +6,7 @@
   min-height: 600px;
   border-bottom: 2px solid $color-home-border;
 
-  @media (min-width: $tablet) {
+  @media screen and (min-width: $laptop) and (min-height: $height-bp) {
     height: calc(100vh - 70px);
     min-height: 750px;
   }
@@ -22,9 +22,13 @@
     justify-content: space-evenly;
     align-items: center;
 
-    @media (min-height: 850px) {
+    @media screen and (min-height: 850px) {
       top: 5vh;
       height: 200px;
+    }
+
+    @media screen and (max-height: $height-bp) {
+      height: 80px;
     }
 
     &__winner {
@@ -47,11 +51,6 @@
         background-image: url("../images/laur_#{$i}.png");
       }
     }
-
-    @media (min-height: 850px) {
-      width: 150px;
-      height: 150px;
-    }
   }
 
   &__trailer {
@@ -59,7 +58,6 @@
     padding-bottom: 56.25%;
     position: relative;
     top: 50%;
-    // transform: translateY(-50%);
     width: 100%;
     max-width: 560px; //750px;
     max-height: 315px; //422.839px;
@@ -80,44 +78,44 @@
       position: absolute;
       top: 0;
       left: 0;
-      // top: 50vh;
-      // transform: translateY(-50%);
       border: 1px solid $color-trailer-border;
 
-      @media (min-width: 560px) and (min-height: 750px) {
-        height: 315px;
-        width: 560px;
+   //   @media (min-width: 560px) and (min-height: 750px) {
+   //     height: 315px;
+    //    width: 560px;
         // top: 50%;
         // left: 50%;
         // transform: translate(-50%, -50%);
       }
 
-      @media (min-width: $tablet) and (min-height: 850px) {
-        width: 750px; //853px;
-        height: 422.039px; //480px
+  //    @media (min-width: $tablet) and (min-height: 850px) {
+  //      width: 750px; //853px;
+  //      height: 422.039px; //480px
         //top: 50%;
         //left: 50%;
         //transform: translate(-50%, -50%);
-      }
-    }
+    //  }
+    
 
     &__intro {
       width: 100%;
-      font-size: .8em;
+      font-size: 0.8em;
+      padding: 0;
       position: absolute;
-      bottom: -83px;
+      top: 100%;
       text-align: center;
       z-index: 1;
 
-      @media (min-width: $tablet) {
-        bottom: -75px;
+      @media (min-width: 590px) {
+        top: 315px;
       }
 
-      @media (min-width: $laptop) {
-        bottom: 100px;
-      }
+      // @media (min-width: $laptop) {
+      //   bottom: 100px;
+      // }
     }
   }
+  
 
   &__congratulation {
     width: calc(100% - 30px);

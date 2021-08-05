@@ -3,10 +3,9 @@
 @use 'sass:color';
 
 .head__nav {
- // background-color: $color-nav-background;
   z-index: 5;
 
-  @media screen and (min-width: $laptop) and (min-height: $height-bp) {
+  @media screen and (min-width: $laptop) and (min-height: $height-first-bp) {
     width: 100vw;
     height: 70px;
     background-color: $color-nav-background;
@@ -27,7 +26,7 @@
   z-index: 5;
   border: none;
 
-  @media screen and (min-width: $laptop) and (min-height: $height-bp) {
+  @media screen and (min-width: $laptop) and (min-height: $height-first-bp) {
     display: none;
   }
 
@@ -36,7 +35,7 @@
     height: 3px;
     background-color: $color-burger-icon;
     position: absolute;
-    transition: .2s linear;
+    transition: 0.2s linear;
     transform-origin: right;
     border-radius: 50%;
 
@@ -59,7 +58,7 @@
 
 .menu-visible {
   span {
-    transition: .2s linear;
+    transition: 0.2s linear;
 
     &:first-of-type {
       transform: rotate(-45deg);
@@ -93,7 +92,7 @@
   top: 0;
   z-index: 4;
   text-align: right;
-  transition: .2s linear;
+  transition: 0.2s linear;
 
   li {
     z-index: 4;
@@ -107,7 +106,7 @@
     }
   }
 
-  @media screen and (min-width: $laptop) and (min-height: $height-bp) {
+  @media screen and (min-width: $laptop) and (min-height: $height-first-bp) {
     background-color: $color-nav-background;
     padding: 0;
     position: static;

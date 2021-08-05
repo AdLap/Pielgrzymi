@@ -6,7 +6,7 @@
   min-height: 600px;
   border-bottom: 2px solid $color-home-border;
 
-  @media screen and (min-width: $laptop) and (min-height: $height-bp) {
+  @media screen and (min-width: $laptop) and (min-height: $height-first-bp) {
     height: calc(100vh - 70px);
     min-height: 750px;
   }
@@ -21,14 +21,11 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    padding-top: 15px;
 
-    @media screen and (min-height: 850px) {
+    @media screen and (min-height: $height-second-bp) {
       top: 5vh;
-      height: 200px;
-    }
-
-    @media screen and (max-height: $height-bp) {
-      height: 80px;
+      height: 120px;
     }
 
     &__winner {
@@ -38,11 +35,16 @@
       justify-content: center;
       align-items: center;
       gap: 50px;
+
+      @media screen and (min-height: $height-second-bp) {
+        height: 150px;
+        margin-top: 0;
+      }
     }
   }
 
-  .laurels {
-    width: 100px;
+  .laurel {
+    width: 85px;
     height: 100px;
     background: no-repeat center/100%;
 
@@ -50,6 +52,21 @@
       &:nth-of-type(#{$i}) {
         background-image: url("../images/laur_#{$i}.png");
       }
+    }
+
+    @media screen and (min-height: $height-second-bp) {
+      height: 120px;
+      width: 120px;
+    }
+  }
+
+  .win {
+    width: 120px;
+    height: 120px;
+
+    @media screen and (min-height: $height-second-bp) {
+      height: 150px;
+      width: 150px;
     }
   }
 
@@ -59,15 +76,13 @@
     position: relative;
     top: 50%;
     width: 100%;
-    max-width: 560px; //750px;
-    max-height: 315px; //422.839px;
+    max-width: 560px;
+    max-height: 315px;
     margin: 0 auto 0 auto;
     z-index: 1;
 
     @media (min-width: $laptop) {
       top: 50%;
-      // top: calc(50vh - 300px);
-      // transform: translateY(-50%);
     }
 
     iframe {
@@ -79,23 +94,7 @@
       top: 0;
       left: 0;
       border: 1px solid $color-trailer-border;
-
-   //   @media (min-width: 560px) and (min-height: 750px) {
-   //     height: 315px;
-    //    width: 560px;
-        // top: 50%;
-        // left: 50%;
-        // transform: translate(-50%, -50%);
-      }
-
-  //    @media (min-width: $tablet) and (min-height: 850px) {
-  //      width: 750px; //853px;
-  //      height: 422.039px; //480px
-        //top: 50%;
-        //left: 50%;
-        //transform: translate(-50%, -50%);
-    //  }
-    
+    }
 
     &__intro {
       width: 100%;
@@ -109,20 +108,21 @@
       @media (min-width: 590px) {
         top: 315px;
       }
-
-      // @media (min-width: $laptop) {
-      //   bottom: 100px;
-      // }
     }
   }
-  
 
   &__congratulation {
     width: calc(100% - 30px);
+    max-width: $laptop;
     padding: 0;
     position: absolute;
     bottom: 15px;
-    left: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @media screen and (min-height: $height-second-bp) {
+      top: 740px;
+    }
 
     &__author {
       text-align: left;
@@ -134,6 +134,7 @@
       display: inline-block;
       text-align: right;
       padding: 0;
+      width: 100%;
     }
   }
 }

@@ -3,9 +3,9 @@
 @use 'sass:color';
 
 .head__nav {
-  z-index: 4;
+  z-index: 5;
 
-  @media (min-width: $tablet) {
+  @media (min-width: $laptop) {
     width: 100vw;
     height: 70px;
     background-color: $color-nav-background;
@@ -26,7 +26,7 @@
   z-index: 5;
   border: none;
 
-  @media (min-width: $tablet) {
+  @media (min-width: $laptop) {
     display: none;
   }
 
@@ -101,12 +101,12 @@
   li:first-of-type {
     margin-top: 100px;
 
-    @media (min-width: $tablet) {
+    @media (min-width: $laptop) {
       margin-top: 0;
     }
   }
 
-  @media (min-width: $tablet) {
+  @media (min-width: $laptop) {
     background-color: $color-nav-background;
     padding: 0;
     position: static;

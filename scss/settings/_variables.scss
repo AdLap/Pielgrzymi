@@ -32,15 +32,9 @@ $color-shop-btn-border: #919191;
 
 $color-contact-background: color.scale($color-shop-background, $lightness: 10%);
 
-
-
-
-
-
 $tablet: 750px;
 $screen: 1000px;
 $laptop: 1200px;
-
 
 $light: 300;
 $regular: 400;
@@ -49,7 +43,6 @@ $bold: 700;
 
 $margin-main: 1.875rem;
 $padding-main: 1.875rem;
-
 
 @mixin font-main {
   font-family: 'Roboto Condensed', sans-serif;
@@ -66,4 +59,3 @@ $padding-main: 1.875rem;
   color: $color-title;
   text-align: center;
 }
-

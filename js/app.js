@@ -5,11 +5,9 @@ import {Form} from "./form";
 
 const menuAnimation = document.querySelector('#burger');
 const menu = document.querySelector('#menu');
-const media = window.matchMedia('(min-width: 750px)');
-
+const media = window.matchMedia('(min-width: 1200px)');
 
 // BURGER ANIMATION
-
 menuAnimation.addEventListener('click', function () {
     menuAnimation.classList.toggle('menu-visible');
 
@@ -46,3 +44,6 @@ ReactDOM.render(<Shop/>, document.getElementById("form__container"));
 
 
 // GALLERY
+
+/* json-server --watch db.json */
+

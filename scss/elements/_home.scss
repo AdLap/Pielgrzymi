@@ -3,8 +3,9 @@
 .home {
   background-color: $color-home-background;
   height: 100vh;
-  min-height: 600px;
+  min-height: 645px;
   border-bottom: 2px solid $color-home-border;
+  position: relative;
 
   @media screen and (min-width: $laptop) and (min-height: $height-first-bp) {
     height: calc(100vh - 70px);
@@ -120,8 +121,12 @@
     left: 50%;
     transform: translateX(-50%);
 
+    @media screen and (min-width: 700px) and (min-height: 650px) {
+      top: 580px;
+    }
+
     @media screen and (min-height: $height-second-bp) {
-      top: 740px;
+      top: 684px;
     }
 
     &__author {

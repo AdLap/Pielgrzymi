@@ -72,27 +72,27 @@
         transform: scale(1.1);
       }
 
-      &:nth-of-type(1) {
-        background-size: 95%;
-        background-position: center;
-        background-color: $color-movie-background;
-        border: 1px solid $color-nav-border;
-      }
+      // &:nth-of-type(1) {
+      //   background-size: 95%;
+      //   background-position: center;
+      //   background-color: $color-movie-background;
+      //   border: 1px solid $color-nav-border;
+      // }
 
-      &:nth-of-type(5) {
-        box-shadow: 0 0 10px $color-nav-border;
-      }
+      // &:nth-of-type(5) {
+      //   box-shadow: 0 0 10px $color-nav-border;
+      // }
 
-      &:nth-of-type(3) {
-        border: 1px solid $color-nav-border;
-      }
+      // &:nth-of-type(3) {
+      //   border: 1px solid $color-nav-border;
+      // }
 
-      &:nth-of-type(6) {
-        background-size: 95%;
-        background-position: center;
-        background-color: $color-movie-background;
-        box-shadow: 0 0 10px $color-nav-border;
-      }
+      // &:nth-of-type(6) {
+      //   background-size: 95%;
+      //   background-position: center;
+      //   background-color: $color-movie-background;
+      //   box-shadow: 0 0 10px $color-nav-border;
+      // }
     }
   }
 
@@ -102,6 +102,24 @@
     h2,
     h3 {
       color: $color-title-h1;
+    }
+
+    &__art {
+      &__img__first,
+      &__img__last {
+        width: 50%;
+        height: 300px;
+      }
+
+      &__img__first {
+        float: right;
+        background: url("../../images/23.png") no-repeat center/contain;
+      }
+
+      &__img__last {
+        float: left;
+        background: url("../../images/15.png") no-repeat center/contain;
+      }
     }
   }
 }

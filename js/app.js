@@ -55,5 +55,4 @@ ReactDOM.render(<Form />, document.getElementById('form__container'));
 // GALLERY
 ReactDOM.render(<Gallery />, document.getElementById('gallery'));
 
-/* json-server --watch db.json */
 

@@ -28,7 +28,7 @@
 }
 
 .form__label {
-  padding: .5rem;
+  padding: 0.5rem;
 }
 
 .form__input {
@@ -39,11 +39,37 @@
 }
 
 .form__check {
-  padding: 1rem;
+  position: relative;
+}
+
+.form__check__input {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  bottom: 7px;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.form__checkbox__fake {
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  margin-top: 1rem;
+  overflow: visible;
+  font-size: 1.5rem;
+  color: $color-txt-main;
+
+  svg {
+    position: absolute;
+    bottom: 8px;
+  }
 }
 
 .check__label {
   margin-left: 20px;
+  line-height: 100%;
 }
 
 .form__btn {
@@ -53,6 +79,8 @@
   padding: 10px 30px;
   border: 1px solid $color-shop-btn-border;
   align-self: flex-start;
+  margin-top: 1rem;
+  cursor: pointer;
 }
 
 .form__msg__err {
@@ -67,11 +95,11 @@
 
 .shop__img {
   width: 300px;
-  height:400px;
+  height: 400px;
   margin-top: 69px;
-  background-color: rgba(255,255,255,.5);
+  background-color: rgba(255, 255, 255, 0.5);
   color: black;
-  background-image: url('../images/cover.png');
+  background-image: url("../images/cover.png");
   background-size: cover;
   align-self: flex-start;
 }

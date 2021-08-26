@@ -1,4 +1,7 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
+import { send } from 'emailjs-com';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCheck } from "@fortawesome/free-solid-svg-icons";
 
 export const Form = () => {
     const [form, setForm] = useState({
@@ -11,6 +14,7 @@ export const Form = () => {
         apartmentNumber: '',
         email: '',
         quantity: '',
+        msg: '',
         check: false
     });
 
@@ -24,14 +28,36 @@ export const Form = () => {
         })
     }
 
+    const handleChangeCheckbox = () => {
+        setForm(form => {
+            return {
+                ...form,
+                check: !form.check
+            }
+        })
+    }
+
     const handleSubmit = e => {
         e.preventDefault();
         setErrMsg('');
         if (validate()) {
+            send('pbm', 'order', form, 'user_ll8Xyyti56HCpjtirE4VV')
+                .then(resp => console.log(resp.text))
+                .catch(error => console.log(error.text));
             setSuccessMsg('Formularz wysłany');
-            /*send mail*/
-        } else {
-            console.log(errMsg);
+            setForm({
+                name: '',
+                surname: '',
+                city: '',
+                post: '',
+                street: '',
+                houseNumber: '',
+                apartmentNumber: '',
+                email: '',
+                quantity: '',
+                msg: '',
+                check: false
+            })
         }
     }
 
@@ -66,13 +92,17 @@ export const Form = () => {
             isValid = false;
             setErrMsg(prevMsg => prevMsg + 'Wpisz nr, lub zostaw puste\n');
         }
-        if (!form.email.includes('@')) {
+        if (!form.email.match(/^[a-z\d]+[\w\d.-]*@(?:[a-z\d]+[a-z\d-]+\.){1,5}[a-z]{2,6}$/i)) {
             isValid = false;
-            setErrMsg(prevMsg => prevMsg + 'Adres mailowy musi zawierać "@"\n');
+            setErrMsg(prevMsg => prevMsg + 'Błędny adres email\n');
         }
         if (form.quantity < 1) {
             isValid = false;
             setErrMsg(prevMsg => prevMsg + 'Minimalna ilość to 1\n');
+        }
+        if (form.msg.length >= 120) {
+            isValid = false;
+            setErrMsg(prevMsg => prevMsg + 'Wiadmomość może mieć maksymalnie 120 znaków\n');
         }
         if (!form.check) {
             isValid = false;
@@ -84,62 +114,67 @@ export const Form = () => {
 
     return (
         <>
-            <form onSubmit={handleSubmit} className='form__container txt'>
+            <form onSubmit={handleSubmit} autoComplete='off' className='form__container txt'>
                 <div className='form__box'>
-                    <label className='form__label'>Imię</label><br/>
+                    <label className='form__label'>Imię</label><br />
                     <input className='form__input' onChange={handleChange} value={form.name} name='name'
-                           placeholder='Imię'/>
+                        placeholder='Imię' />
                 </div>
                 <div className='form__box'>
-                    <label className='form__label'>Nazwisko</label><br/>
+                    <label className='form__label'>Nazwisko</label><br />
                     <input className='form__input' onChange={handleChange} value={form.surname} name='surname'
-                           placeholder='Nazwisko'/>
+                        placeholder='Nazwisko' />
                 </div>
                 <div className='form__box'>
-                    <label className='form__label'>Miasto</label><br/>
+                    <label className='form__label'>Miasto</label><br />
                     <input className='form__input' onChange={handleChange} value={form.city} name='city'
-                           placeholder='Miasto'/>
+                        placeholder='Miasto' />
                 </div>
                 <div className='form__box'>
-                    <label className='form__label'>Kod pocztowy</label><br/>
+                    <label className='form__label'>Kod pocztowy</label><br />
                     <input className='form__input' onChange={handleChange} value={form.post} name='post'
-                           placeholder='__-___'/>
+                        placeholder='__-___' />
                 </div>
                 <div className='form__box'>
-                    <label className='form__label'>Miasto</label><br/>
+                    <label className='form__label'>Ulica</label><br />
                     <input className='form__input' onChange={handleChange} value={form.street} name='street'
-                           placeholder='Ulica'/>
+                        placeholder='Ulica' />
                 </div>
                 <div className='form__box'>
-                    <label className='form__label'>Nr domu</label><br/>
+                    <label className='form__label'>Nr domu</label><br />
                     <input className='form__input' onChange={handleChange} value={form.houseNumber} name='houseNumber'
-                           type='number' placeholder='Nr domu'/>
+                        type='number' placeholder='Nr domu' />
                 </div>
                 <div className='form__box'>
-                    <label className='form__label'>Nr mieszkania</label><br/>
+                    <label className='form__label'>Nr mieszkania</label><br />
                     <input className='form__input' onChange={handleChange} value={form.apartmentNumber}
-                           name='apartmentNumber'
-                           type='number' placeholder='Nr mieszkania'/>
+                        name='apartmentNumber'
+                        type='number' placeholder='Nr mieszkania' />
                 </div>
                 <div className='form__box'>
-                    <label className='form__label'>e-mail</label><br/>
+                    <label className='form__label'>e-mail</label><br />
                     <input className='form__input' onChange={handleChange} value={form.email} name='email' type='email'
-                           placeholder='e-mail'/>
+                        placeholder='e-mail' />
                 </div>
                 <div className='form__box'>
-                    <label className='form__label'>Ilość</label><br/>
+                    <label className='form__label'>Ilość</label><br />
                     <input className='form__input' onChange={handleChange} value={form.quantity} name='quantity'
-                           type='number'
-                           placeholder='Ilość'/>
+                        type='number'
+                        placeholder='Ilość' />
+                </div>
+                <div className='form__box'>
+                    <label className='form__label'>Wiadomość (opcjonalnie)</label><br />
+                    <textarea className='form__input form__msg' onChange={handleChange} value={form.msg} name='msg'
+                         rows='4' columns='32' placeholder='Wpisz wiadomość...' />
                 </div>
                 <div className='form__check'>
-                    <input className='form__check' onChange={handleChange} value={form.check} name='check'
-                           type='checkbox'/>
+                    <input className='form__check__input' type='checkbox' value={form.check} onChange={handleChangeCheckbox} name='check' />
+                    <span className='form__checkbox__fake form__input'>{form.check ? <FontAwesomeIcon icon={faCheck} /> : null}</span>
                     <label className='check__label'>Zapoznałem się z regulaminem i RODO</label>
                 </div>
 
                 <button type='submit' className='form__btn btn' onClick={handleSubmit}>Zamawiam</button>
-                <div className='form__msg__err' style={{whiteSpace: 'pre-wrap'}}>{errMsg}</div>
+                <div className='form__msg__err' style={{ whiteSpace: 'pre-wrap' }}>{errMsg}</div>
                 <div className='form__msg__success'>{successMsg}</div>
             </form>
 

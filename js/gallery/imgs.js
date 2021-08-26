@@ -30,7 +30,23 @@ const imgs = [
     'images/29.png',
     'images/30.png',
     'images/31.png',
-    'images/32.png'
+    'images/32.png',
+    'images/33.png',
+    'images/34.png',
+    'images/35.png',
+    'images/36.png',
+    'images/37.png',
+    'images/38.png',
+    'images/39.png',
+    'images/40.png',
+    'images/41.png',
+    'images/42.png',
+    'images/43.png',
+    'images/44.png',
+    'images/45.png',
+    'images/46.png',
+    'images/47.png',
+    'images/48.png'
 ]
 
 export default imgs;

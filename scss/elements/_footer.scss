@@ -13,16 +13,24 @@
     line-height: 1em;
   }
   .creator {
-    padding: 0.5em 0 0.5em 0;
+    padding: 0;
 
     &__home {
-      color: gold;
+      color: #ffeb80;
+
+      &:hover {
+        color: gold;
+      }
     }
   }
 
   .portals {
-    padding: 0.5em 0 0.5em 0;
     color: $color-txt-main;
-    line-height: 1em;
+    padding: 0;
+    font-size: 1.3rem;
+
+    &:hover {
+      color: #5488ff;
+    }
   }
 }

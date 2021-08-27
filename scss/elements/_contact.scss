@@ -1,16 +1,17 @@
 .section__contact {
   background-color: $color-contact-background;
   padding-bottom: 2rem;
+}
 
-  h3 {
-    padding-top: 0;
-  }
+.director {
+  padding-top: 0;
+}
 
-  div {
-    text-align: center;
+.contact__data {
+  text-align: center;
 
-    span {
-      padding: 1rem;
-    }
+  &__phone,
+  &__email {
+    padding: 1rem;
   }
 }

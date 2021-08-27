@@ -1,10 +1,11 @@
 .footer {
   @include font-main;
-   height: 50px;
+  height: 50px;
   background-color: $color-nav-background;
 
   &__container {
-     height: 100%;
+    width: 88%;
+    height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -12,15 +13,15 @@
     line-height: 1em;
   }
   .creator {
-    padding: .5em 0 .5em 0;
-  }
+    padding: 0.5em 0 0.5em 0;
 
-  .autor {
-    color: gold;
+    &__home {
+      color: gold;
+    }
   }
 
   .portals {
-    padding: .5em 0 .5em 0;
+    padding: 0.5em 0 0.5em 0;
     color: $color-txt-main;
     line-height: 1em;
   }

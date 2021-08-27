@@ -54,8 +54,8 @@
     flex-wrap: wrap;
 
     &__img {
-      width: 340px;
-      height: 200px;
+      width: 159px;
+      height: 93px;
       background-repeat: no-repeat;
       background-size: cover;
       margin: 3px;
@@ -64,6 +64,11 @@
 
       &:hover {
         transform: scale(1.1);
+      }
+
+      @media screen and (min-width: $tablet) {
+        width: 240px;
+        height: 141px;
       }
     }
   }
@@ -104,6 +109,30 @@
         @media screen and (min-width: $tablet) {
           float: left;
           margin-right: 20px;
+        }
+      }
+    }
+    
+    &__author {
+      text-align: right;
+      text-indent: 0;
+      font-weight: 700;
+      color: $color-movie-title;
+
+      &__desc {
+        color: $color-txt-main;
+        font-weight: 400;
+        font-style: italic;
+      }
+
+      &__link {
+        color: $color-txt-main;
+        font-weight: 400;
+        font-style: italic;
+        text-decoration: underline;
+
+        &:hover {
+          color: $color-movie-title;
         }
       }
     }

@@ -7,6 +7,16 @@ export const Modal = ({ pic, onClose, onPrev, onNext }) => {
     const [hoverNext, setHoverNext] = useState(false);
     const [hoverPrev, setHoverPrev] = useState(false);
 
+    const modalBackground = {
+        width: '100vw',
+        height: '100vh',
+        position: 'fixed',
+        top: '0',
+        left: '0',
+        backgroundColor: 'rgba(0,0,0,.4)',
+        backdropFilter: 'blur(10px)'
+    }
+
     const styleModal = {
         width: '90vw',
         height: '90vh',
@@ -72,38 +82,40 @@ export const Modal = ({ pic, onClose, onPrev, onNext }) => {
     }
 
     return (
-        <div className='movie__galllery__modal' style={styleModal}>
-            <div className='movie__gallery__modal__prev'
-                style={stylePrev}
-                onMouseEnter={() => hovPrev(true)}
-                onMouseLeave={() => hovPrev(false)}
-                onClick={() => onPrev(pic)}
-            >
-                <FontAwesomeIcon icon={faArrowCircleLeft}
-                    style={{ transition: '.3s', color: hoverPrev ? '#7b932a' : 'rgba(121, 121, 121, 1)' }}
-                />
+        <div className='modal' style={modalBackground}>
+            <div className='movie__galllery__modal' style={styleModal}>
+                <div className='movie__gallery__modal__prev'
+                    style={stylePrev}
+                    onMouseEnter={() => hovPrev(true)}
+                    onMouseLeave={() => hovPrev(false)}
+                    onClick={() => onPrev(pic)}
+                >
+                    <FontAwesomeIcon icon={faArrowCircleLeft}
+                        style={{ transition: '.3s', color: hoverPrev ? '#7b932a' : 'rgba(121, 121, 121, 1)' }}
+                    />
+                </div>
+                <div className='movie__gallery__modal__next'
+                    style={styleNext}
+                    onMouseEnter={() => hovNext(true)}
+                    onMouseLeave={() => hovNext(false)}
+                    onClick={() => onNext(pic)}
+                >
+                    <FontAwesomeIcon icon={faArrowCircleRight}
+                        style={{ transition: '.3s', color: hoverNext ? '#7b932a' : 'rgba(121, 121, 121, 1)' }}
+                    />
+                </div>
+                <div className='movie__gallery__modal__close'
+                    style={styleClose}
+                    onMouseEnter={() => hovClose(true)}
+                    onMouseLeave={() => hovClose(false)}
+                    onClick={() => onClose(null)}
+                >
+                    <FontAwesomeIcon icon={faTimesCircle}
+                        style={{ transition: '.3s', color: hoverClose ? '#7b932a' : 'rgba(121, 121, 121, 1)' }}
+                    />
+                </div>
+                <img src={pic} alt='PBM picture' className='movie__gallery__modal__img' style={styleImg} />
             </div>
-            <div className='movie__gallery__modal__next'
-                style={styleNext}
-                onMouseEnter={() => hovNext(true)}
-                onMouseLeave={() => hovNext(false)}
-                onClick={() => onNext(pic)}
-            >
-                <FontAwesomeIcon icon={faArrowCircleRight}
-                    style={{ transition: '.3s', color: hoverNext ? '#7b932a' : 'rgba(121, 121, 121, 1)' }}
-                />
-            </div>
-            <div className='movie__gallery__modal__close'
-                style={styleClose}
-                onMouseEnter={() => hovClose(true)}
-                onMouseLeave={() => hovClose(false)}
-                onClick={() => onClose(null)}
-            >
-                <FontAwesomeIcon icon={faTimesCircle}
-                    style={{ transition: '.3s', color: hoverClose ? '#7b932a' : 'rgba(121, 121, 121, 1)' }}
-                />
-            </div>
-            <img src={pic} alt='PBM picture' className='movie__gallery__modal__img' style={styleImg} />
         </div>
     );
 }

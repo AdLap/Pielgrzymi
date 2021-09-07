@@ -23,8 +23,13 @@
   margin-top: 30px;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   flex-direction: column;
+
+  @media screen and (min-width: $tablet) {
+    align-items: flex-start;
+
+  }
 }
 
 .form__label {
@@ -78,19 +83,34 @@
   background-color: $color-shop-btn;
   padding: 10px 30px;
   border: 1px solid $color-shop-btn-border;
-  align-self: flex-start;
+  align-self: center;
   margin-top: 1rem;
   cursor: pointer;
+
+  @media screen and (min-width: $tablet) {
+    align-self: flex-start;
+
+  }
 }
 
 .form__msg__err {
-  width: 375px;
+  width: 100%;
+  margin-top: 20px;
   color: $color-err;
+
+  @media screen and (min-width: $tablet) {
+    width: 375px;
+  }
 }
 
 .form__msg__success {
   width: 200px;
   color: $color-success;
+  text-align: center;
+
+  @media screen and (min-width: $tablet) {
+    text-align: left;
+  }
 }
 
 .shop__img {

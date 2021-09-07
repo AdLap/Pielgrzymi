@@ -1,11 +1,22 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Modal } from './Modal';
 import { Picture } from './Picture';
 import imgs from './imgs';
+import { storage } from 'firebase';
 
 export const Gallery = () => {
     const [pics, setPics] = useState(imgs);
     const [currPic, setCurrPic] = useState(null);
+
+    // useEffect(() => {
+    //     storage
+    //     .ref('img')
+    //     .then(img => console.log(img))
+    // },[])
+
+    useEffect(() => {
+        
+    },[])
 
     const showPic = pic => {
         setCurrPic(pic);

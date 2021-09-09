@@ -42,8 +42,7 @@ export const Form = () => {
         setErrMsg('');
         if (validate()) {
             send('pbm', 'order', form, 'user_ll8Xyyti56HCpjtirE4VV')
-                .then(resp => console.log(resp.text))
-                .catch(error => console.log(error.text));
+                .catch(error => alert('Coś poszło nie tak...\n', error.text));
             setSuccessMsg('Formularz wysłany');
             setForm({
                 name: '',
@@ -143,7 +142,7 @@ export const Form = () => {
                 <div className='form__box'>
                     <label className='form__label'>Nr domu</label><br />
                     <input className='form__input' onChange={handleChange} value={form.houseNumber} name='houseNumber'
-                        type='number' placeholder='Nr domu' />
+                        placeholder='Nr domu' />
                 </div>
                 <div className='form__box'>
                     <label className='form__label'>Nr mieszkania</label><br />
@@ -165,7 +164,7 @@ export const Form = () => {
                 <div className='form__box'>
                     <label className='form__label'>Wiadomość (opcjonalnie)</label><br />
                     <textarea className='form__input form__msg' onChange={handleChange} value={form.msg} name='msg'
-                         rows='4' columns='32' placeholder='Wpisz wiadomość...' />
+                        rows='4' columns='32' placeholder='Wpisz wiadomość...' />
                 </div>
                 <div className='form__check'>
                     <input className='form__check__input' type='checkbox' value={form.check} onChange={handleChangeCheckbox} name='check' />

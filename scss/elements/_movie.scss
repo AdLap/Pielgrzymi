@@ -33,7 +33,7 @@
         display: block;
         width: 35%;
         height: 300px;
-        background: url(../images/03.png) no-repeat center/contain;
+        background: url(../images/small_03.png) no-repeat center/contain;
       }
     }
   }
@@ -95,7 +95,7 @@
       }
 
       &__img__first {
-        background: url("../images/23.png") no-repeat center/contain;
+        background: url("../images/small_23.png") no-repeat center/contain;
 
         @media screen and (min-width: $tablet) {
           float: right;
@@ -104,7 +104,7 @@
       }
 
       &__img__last {     
-        background: url("../images/15.png") no-repeat center/contain;
+        background: url("../images/small_15.png") no-repeat center/contain;
 
         @media screen and (min-width: $tablet) {
           float: left;
